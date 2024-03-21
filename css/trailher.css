@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&family=Yusei+Magic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Yusei Magic", sans-serif;
+
+}
+main{
+    padding: 16px;
+    text-align: center;
+}
+main .lista{
+    width: 150px;
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
