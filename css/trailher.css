@@ -17,3 +17,38 @@ main .lista{
     margin: 0 auto;
     padding-bottom: 16px;
 }
+.lista ol li{
+    backdrop-filter: brightness(75%);
+    border: 2px solid #6b1db9;
+    border-radius: 6px;
+    
+
+}
+main p{
+    text-align: justify;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+
+}
+#persona{
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    text-align: center;
+    font-weight: bold;
+    text-transform:uppercase;
+}
+
+@keyframes slidein {
+    from{
+      width: 300%;
+      color:#ecf006
+    }
+  
+    to {
+      width: 100%;
+      color: rgb(255, 51, 0);
+    }
+  }
