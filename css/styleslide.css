@@ -1,0 +1,23 @@
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+.btn {
+    background-color: chartreuse;
+    width: 100px;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+}

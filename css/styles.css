@@ -86,7 +86,16 @@ body{
     overflow:hidden;
 
 }
-.foto1 img{
-    position:absolute;
-    width: 400px;
+.foto1{
+  color: #fff;
+   margin-left: 200px;
+   margin-top: 200px;
+    width: 300px;
+    height: 350px;
+    background-color: rgba(2, 2, 2, 0.384);
+    border-radius: 16px;
+    text-align: justify;
+}
+.foto1 h4{
+  margin: 16px 0 16px 0;
 }

@@ -1,0 +1,42 @@
+
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+    max-width: 500px;
+    height: 250px;
+    width: 100%;
+    margin: 5% auto;
+    background-color: silver;
+    padding: 16px;
+    
+}
+.container h4{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.container input[type="text"], input {
+    padding: 8px;
+    width: 100%;
+    color: #fff;
+    background-color: rgb(27, 27, 27);
+}
+.container span{
+    padding: 8px;
+    background-color: rgb(44, 36, 36);
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 16px;
+}
+.container button{
+    margin-top: 16px;
+    width: 150px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(9, 223, 116);
+}

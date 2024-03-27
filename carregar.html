@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5;url=batman.html">
+  <title>Loading Bar with Countdown</title>
+  
+  <style>
+    body{
+      background-color: black;
+    }
+      .loader-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 10% auto;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader {
+  width: 0%;
+  height: 100%;
+  background-color: #ff4800; 
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #333;
+}
+
+  </style>
+</head>
+<body>
+  <div class="loader-container">
+    <div class="loader" id="loader"></div>
+    <div class="percentage" id="percentage">0%</div>
+  </div>
+
+<script>
+     document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.getElementById("loader");
+    const percentage = document.getElementById("percentage");
+  
+    
+    function simulateLoading() {
+      let progress = 0;
+      const interval = setInterval(function() {
+        progress += Math.random() * 10;
+        loader.style.width = progress + "%";
+        percentage.textContent = Math.round(progress) + "%";
+        if (progress >= 100) {
+          clearInterval(interval);
+        }
+      }, 200);
+    }
+  
+
+    simulateLoading();
+  });
+  
+</script>
+ 
+</body>
+</html>

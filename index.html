@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Batman Filme</title>
-  </head>
-  <body>
-    <audio autoplay loop>
-      <source src="./audio/Batman.mp3" type="audio/mpeg">
-    </audio>
-    <header class="header">
-      <div class="logo">
-        <img src="./img/bat.png" alt="logo-do-batman" />
-        <div class="video">
-          <a href="./paging.html" title="Clique aqui">Veja o Trailer</a>
-        </div>
-      </div>
-      <nav class="menu">
-        <ul>
-          <li><a href="http://">Home</a></li>
-          <li><a href="http://">Sobre Nós</a></li>
-          <li><a href="http://">Fotos</a></li>
-          <li><a href="http://">Atores</a></li>
-        
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <section>
-        <figure class="foto1">
-          <img src="./img/persona.jpg" alt="batman">
-        </figure>
-      </section>
-    </main>
-    <footer class="footer"></footer>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/entrada.css">
+    <title>O batman</title>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm" onsubmit="return validateForm()">
+            <h4>Entre com a Senha</h4>
+            <label for="username">Login:</label>
+            <input type="text" id="username" name="username" required placeholder="Digite o login">
+            <label for="password">senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite a senha" required>
+            <span>Acessar</span>
+            <button id="span"> Acesso permintido</button>
+          </form>
+    </div>
 
-    <script src="./js/main.js"></script>
-  </body>
+    <script>
+
+   function validateForm() {
+  var login = document.getElementById("username").value;
+  var senha = document.getElementById("password").value;
+  var msg = document.getElementById("span")
+
+  
+
+  // Condição de validação básica
+  if (login === "senai" && senha === "010203") {
+    alert("Login bem-sucedido!");
+    window.location.href = "./carregar.html";
+    msg.style = "background-color:red"
+    return false; 
+  } else {
+    alert("Usuário ou senha incorretos. Por favor, tente novamente.");
+    return false;
+  }
+}
+    </script>
+</body>
 </html>
