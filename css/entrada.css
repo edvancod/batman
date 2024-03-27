@@ -3,6 +3,7 @@
     margin: 0 ;
     padding: 0;
     box-sizing: border-box;
+    color: #fff;
 
 }
 
@@ -11,7 +12,7 @@
     height: 250px;
     width: 100%;
     margin: 5% auto;
-    background-color: silver;
+    background-color: rgb(133, 88, 88);
     padding: 16px;
     
 }
@@ -19,7 +20,7 @@
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.container input[type="text"], input {
+.container input {
     padding: 8px;
     width: 100%;
     color: #fff;
@@ -38,5 +39,5 @@
     padding: 8px;
     border-radius: 10px;
     border: none;
-    background-color: rgb(9, 223, 116);
+    background-color: rgb(109, 126, 117);
 }

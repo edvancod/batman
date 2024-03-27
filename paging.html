@@ -33,42 +33,36 @@
                 <li>Colin Farrell</li>
               </ul>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
-          quod voluptatum explicabo tempora perferendis ad ipsam dolores.
-          Tempora ipsam, aperiam laudantium laboriosam ratione, numquam illo
-          labore sequi minus dolorum cupiditate?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non unde eos
-          modi! Omnis officia neque consequatur excepturi et, cum doloremque
-          nesciunt rerum hic error accusantium ut nobis delectus sunt quas? Nam
-          consequatur, esse dicta eaque beatae tempora commodi, quas impedit
-          quia eius cum! Nam repellendus ab numquam sapiente quos a nihil
-          tempore iste eligendi ea, quas iure. Soluta, a ut? Rerum a ad
-          explicabo repellendus amet, sint eius dolores quod? Consectetur
-          voluptatum saepe dignissimos dolor aperiam nihil? Doloremque,
-          aspernatur corrupti nostrum recusandae quas nam ducimus, maxime
-          nesciunt optio architecto molestias? Minima rem molestias odio. Nisi
-          provident officiis veniam, quasi obcaecati atque voluptas
-          reprehenderit cum magnam quaerat? Veritatis cupiditate obcaecati, quos
-          ad consectetur nisi rerum voluptatibus at possimus, in officia
-          similique. Hic, nobis eligendi quae porro ad repudiandae assumenda
-          numquam illum totam praesentium eos? Neque, porro? Odio omnis
-          consequuntur voluptates, dignissimos quia ipsam, aliquid voluptas
-          laborum, sunt nihil dolorum sed quae. Minus nemo magnam fugit
-          laboriosam eaque error quia ea culpa. Neque sint sequi voluptatem
-          maxime ratione excepturi, eius similique in corrupti possimus nisi
-          officia quaerat nihil, molestiae dolorem, soluta perspiciatis! At nam
-          rem voluptatum suscipit unde quibusdam laborum quasi, ex
-          necessitatibus dolor debitis! Laudantium in quam tenetur maiores
-          dicta? Quae, ad aspernatur. Porro, repellat. Commodi velit atque
-          voluptate in cum? Debitis ad dolores vero autem? Voluptas aspernatur
-          suscipit expedita repellat aliquam dicta nam voluptatum delectus error
-    
-        
-        </p>
+        <form action="" onsubmit=" return validar()">
+          <label for="">Cursos:</label>
+          <input type="text" name="curso" value="Front-end"><br/>
+
+          <label for="">Mateiras:</label><br/>
+          <input type="checkbox" id='cbox-html' name="materia" value="html">
+          <label for="cbox-html">HTML</label>
+
+          <input type="checkbox" id='cbox-css'  name="materia" value="css">
+          <label for="cbox-css">CSS</label>
+
+          <input type="checkbox" id='cbox-javaScrpt'  name="materia" value="javaScript">
+          <label for="cbox-javaScrpt">JAVASCRIPT</label><br/> 
+          <label for="">Cor</label><br/>
+
+          <input type="color" id="cor" value="#FFFF00">
+        <br/>
+        <input type="submit" value="Enviar">
+
+        </form>
       </section>
     </main>
+
+    <script>
+      function validar(){
+        let cor = document.getElementById("cor").value;
+        document.body.style.backgroundColor = cor
+
+        return false;
+      }
+    </script>
   </body>
 </html>

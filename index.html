@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/entrada.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/entrada.css" />
     <title>O batman</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <form id="loginForm" onsubmit="return validateForm()">
-            <h4>Entre com a Senha</h4>
-            <label for="username">Login:</label>
-            <input type="text" id="username" name="username" required placeholder="Digite o login">
-            <label for="password">senha:</label>
-            <input type="password" id="password" name="password" placeholder="Digite a senha" required>
-            <span>Acessar</span>
-            <button id="span"> Acesso permintido</button>
-          </form>
+      <form id="loginForm" onsubmit="return validateForm()">
+        <h4>Entre com a Senha</h4>
+        <label for="username">Login:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          placeholder="Digite o login"
+        />
+        <label for="password">senha:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Digite a senha"
+          required
+        />
+        <span>Acessar</span>
+        <button id="span">Entre para ter acesso</button>
+      </form>
     </div>
 
+    
+
+     
+
+
     <script>
+function validateForm() {
+    var login = document.getElementById("username").value;
+    var senha = document.getElementById("password").value;
+    var msg = document.getElementById("span");
 
-   function validateForm() {
-  var login = document.getElementById("username").value;
-  var senha = document.getElementById("password").value;
-  var msg = document.getElementById("span")
-
-  
-
-  // Condição de validação básica
-  if (login === "senai" && senha === "010203") {
-    alert("Login bem-sucedido!");
-    window.location.href = "./carregar.html";
-    msg.style = "background-color:red"
-    return false; 
-  } else {
-    alert("Usuário ou senha incorretos. Por favor, tente novamente.");
-    return false;
-  }
+    if (login === "senai" && senha === "010203") {
+        alert("Login bem-sucedido!");
+        msg.innerText= "ACESSO PERMINTIDO !!"
+        msg.style.backgroundColor = "green"; 
+        setTimeout(function() {
+            window.location.href = "./carregar.html";
+        }, 1000); 
+        return false;
+    } else {
+        alert("Usuário ou senha incorretos. Por favor, tente novamente.");
+        msg.style.backgroundColor = "red"; 
+        msg.innerText= "ACESSO NEGADO !!"
+        return false;
+    }
 }
-    </script>
-</body>
+</script>
+
+  </body>
 </html>
