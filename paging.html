@@ -49,13 +49,13 @@
         <input type="color" id="cor" value="#FFFF00">
         <br />
 
-        <input type="radio" name="materia" id="radio-remoto" value="remoto">
+        <input type="radio" name="modalidade" id="radio-remoto" value="remoto">
         <label for="">Remoto</label>
         <input type="radio" name="modalidade" id="redio-presencial" value="presencial">
         <label for="">presencial</label> <br />
         <input type="submit" value="Enviar">
       </form>
-      
+
     </section>
   </main>
 
@@ -63,6 +63,7 @@
     function validar() {
       let materia = verificaCheck(document.getElementsByName("materia"));
       console.log(materia);
+
       let modalidade = verificaCheck(document.getElementsByName("modalidade"));
       console.log(modalidade);
 
@@ -78,8 +79,8 @@
         if (i.checked) {
           r.push(i.value);
         }
-        return r;
       }
+      return r;
     }
 
   </script>
