@@ -100,7 +100,18 @@ body{
 .foto1 h4{
   margin: 16px 0 16px 0;
 }
-.footer{
-  height: 350px;
-  background-color: #000;
+.foto2{
+  position: absolute;
+  width: 350px;
+  color: #fff;
+  right: 200px;
+  top: 500px;
+  background-color: rgba(7, 7, 7, 0.568);
+  border-radius: 16px;
+  padding: 8px;
+}
+.foto2 img{
+  margin-top: 16px;
+ width: 350px;
+ border-radius: 16px;
 }

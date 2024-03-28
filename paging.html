@@ -1,68 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/trailher.css">
-    <title>video</title>
-  </head>
-  <body>
-    <main>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/rsQEor4y2hg?si=qVJ8o9zm4hrzgRGB&amp;controls=0"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
 
-      <h3><a href="./index.html">Voltar para Home</a></h3>
-      <section>
-        <h2>Sobre o filme</h2>
-        <p id="persona">Elenco do Filme:</p>
-       
-        <div class="lista">
-            <ol>
-                <li>Robert Pattinson</li>
-                <li>Zoë Kravitz</li>
-                <li>Paul Dano</li>
-                <li>Colin Farrell</li>
-              </ul>
-        </div>
-        <form action="" onsubmit=" return validar()">
-          <label for="">Cursos:</label>
-          <input type="text" name="curso" value="Front-end"><br/>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/trailher.css">
+  <title>video</title>
+</head>
 
-          <label for="">Mateiras:</label><br/>
-          <input type="checkbox" id='cbox-html' name="materia" value="html">
-          <label for="cbox-html">HTML</label>
+<body>
+  <main>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rsQEor4y2hg?si=qVJ8o9zm4hrzgRGB&amp;controls=0"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
 
-          <input type="checkbox" id='cbox-css'  name="materia" value="css">
-          <label for="cbox-css">CSS</label>
+    <h3><a href="./index.html">Voltar para Home</a></h3>
+    <section>
+      <h2>Sobre o filme</h2>
+      <p id="persona">Elenco do Filme:</p>
 
-          <input type="checkbox" id='cbox-javaScrpt'  name="materia" value="javaScript">
-          <label for="cbox-javaScrpt">JAVASCRIPT</label><br/> 
-          <label for="">Cor</label><br/>
+      <div class="lista">
+        <ol>
+          <li>Robert Pattinson</li>
+          <li>Zoë Kravitz</li>
+          <li>Paul Dano</li>
+          <li>Colin Farrell</li>
+          </ul>
+      </div>
+      <form action="" onsubmit=" return validar()">
+        <label for="">Cursos:</label>
+        <input type="text" name="curso" value="Front-end"><br />
 
-          <input type="color" id="cor" value="#FFFF00">
-        <br/>
+        <label for="">Mateiras:</label><br />
+        <input type="checkbox" id='cbox-html' name="materia" value="html">
+        <label for="cbox-html">HTML</label>
+
+        <input type="checkbox" id='cbox-css' name="materia" value="css">
+        <label for="cbox-css">CSS</label>
+
+        <input type="checkbox" id='cbox-javaScrpt' name="materia" value="javaScript">
+        <label for="cbox-javaScrpt">JAVASCRIPT</label><br />
+
+        <label for="">Cor</label><br />
+
+        <input type="color" id="cor" value="#FFFF00">
+        <br />
+
+        <input type="radio" name="materia" id="radio-remoto" value="remoto">
+        <label for="">Remoto</label>
+        <input type="radio" name="modalidade" id="redio-presencial" value="presencial">
+        <label for="">presencial</label> <br />
         <input type="submit" value="Enviar">
+      </form>
+      
+    </section>
+  </main>
 
-        </form>
-      </section>
-    </main>
+  <script>
+    function validar() {
+      let materia = verificaCheck(document.getElementsByName("materia"));
+      console.log(materia);
+      let modalidade = verificaCheck(document.getElementsByName("modalidade"));
+      console.log(modalidade);
 
-    <script>
-      function validar(){
-        let cor = document.getElementById("cor").value;
-        document.body.style.backgroundColor = cor
+      let cor = document.getElementById("cor").value;
+      document.body.style.backgroundColor = cor
 
-        return false;
+      return false;
+    }
+
+    function verificaCheck(itens) {
+      r = [];
+      for (i of itens) {
+        if (i.checked) {
+          r.push(i.value);
+        }
+        return r;
       }
-    </script>
-  </body>
+    }
+
+  </script>
+</body>
+
 </html>
